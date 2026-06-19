@@ -1,0 +1,6 @@
+﻿.vercel/
+.playwright-mcp/
+*.mp4
+Sierra_249967_Transkript.txt
+.claude/
+node_modules/
