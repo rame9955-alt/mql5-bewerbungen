@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-19",
-  "statusChecked": "2026-06-19",
+  "updated": "2026-06-20",
+  "statusChecked": "2026-06-20",
   "applications": [
     { "date": "2026-06-17", "time": "10:49", "platform": "MQL5", "jobId": "249968", "title": "Multi-Timeframe Dashboard EA with Built-in Indicator", "url": "https://www.mql5.com/en/job/249968/discussion?id=1315343", "priceUsd": 150, "deadlineDays": 5, "status": "geloescht", "category": "EA + Indikator" },
     { "date": "2026-06-17", "time": "10:51", "platform": "MQL5", "jobId": "249967", "title": "Sierra chart job", "url": "https://www.mql5.com/en/job/249967/discussion?id=1315346", "priceUsd": 75, "deadlineDays": 3, "status": "geantwortet", "category": "Sierra Chart / C++" },
