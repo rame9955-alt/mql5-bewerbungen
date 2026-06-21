@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-20",
-  "statusChecked": "2026-06-20",
+  "updated": "2026-06-21",
+  "statusChecked": "2026-06-21",
   "applications": [
     { "date": "2026-06-17", "time": "10:49", "platform": "MQL5", "jobId": "249968", "title": "Multi-Timeframe Dashboard EA with Built-in Indicator", "url": "https://www.mql5.com/en/job/249968/discussion?id=1315343", "priceUsd": 150, "deadlineDays": 5, "status": "geloescht", "category": "EA + Indikator" },
     { "date": "2026-06-17", "time": "10:51", "platform": "MQL5", "jobId": "249967", "title": "Sierra chart job", "url": "https://www.mql5.com/en/job/249967/discussion?id=1315346", "priceUsd": 75, "deadlineDays": 3, "status": "geantwortet", "category": "Sierra Chart / C++" },
@@ -32,6 +32,16 @@
     { "date": "2026-06-19", "time": "20:00", "platform": "MQL5", "jobId": "249996", "title": "Telegram bot upgrade + options trading feature", "url": "https://www.mql5.com/en/job/249996/discussion?id=1316481", "priceUsd": 120, "deadlineDays": 5, "status": "offen", "category": "Bot / Python" },
     { "date": "2026-06-19", "time": "20:01", "platform": "MQL5", "jobId": "249885", "title": "Professional AI Automation Trading Bot Forex & Crypto", "url": "https://www.mql5.com/en/job/249885/discussion?id=1316482", "priceUsd": 750, "deadlineDays": 30, "status": "offen", "category": "Python / AI" },
     { "date": "2026-06-19", "time": "20:02", "platform": "MQL5", "jobId": "249884", "title": "MT5 Python Trading Bot – Smart Money Concepts", "url": "https://www.mql5.com/en/job/249884/discussion?id=1316483", "priceUsd": 50, "deadlineDays": 4, "status": "offen", "category": "Python / EA" },
-    { "date": "2026-06-19", "time": "20:17", "platform": "MQL5", "jobId": "249999", "title": "Repair TradingView→Python→MT5 system (EXU) + proof report", "url": "https://www.mql5.com/en/job/249999/discussion?id=1316485", "priceUsd": 150, "deadlineDays": 7, "status": "offen", "category": "Python / Backend" }
+    { "date": "2026-06-19", "time": "20:17", "platform": "MQL5", "jobId": "249999", "title": "Repair TradingView→Python→MT5 system (EXU) + proof report", "url": "https://www.mql5.com/en/job/249999/discussion?id=1316485", "priceUsd": 150, "deadlineDays": 7, "status": "offen", "category": "Python / Backend" },
+    { "date": "2026-06-21", "time": "10:37", "platform": "MQL5", "jobId": "250033", "title": "Fat01 (Grid Martingale XAUUSD EA)", "url": "https://www.mql5.com/en/job/250033/discussion?id=1316896", "priceUsd": 120, "deadlineDays": 4, "status": "offen", "category": "EA" },
+    { "date": "2026-06-21", "time": "10:37", "platform": "MQL5", "jobId": "250031", "title": "Ea that works on xauusd, usoil US30 and Btc etc", "url": "https://www.mql5.com/en/job/250031/discussion?id=1316897", "priceUsd": 80, "deadlineDays": 5, "status": "offen", "category": "EA" },
+    { "date": "2026-06-21", "time": "10:37", "platform": "MQL5", "jobId": "250029", "title": "Advanced Forex Expert Advisor (AMK Fx) – EA + Indikator", "url": "https://www.mql5.com/en/job/250029/discussion?id=1316898", "priceUsd": 280, "deadlineDays": 12, "status": "offen", "category": "EA + Indikator" },
+    { "date": "2026-06-21", "time": "10:37", "platform": "MQL5", "jobId": "250019", "title": "Panda103 (Institutional Prop Firm SMC Bot)", "url": "https://www.mql5.com/en/job/250019/discussion?id=1316899", "priceUsd": 450, "deadlineDays": 10, "status": "offen", "category": "EA" },
+    { "date": "2026-06-21", "time": "10:37", "platform": "MQL5", "jobId": "249914", "title": "MT5 Expert Advisor that mirrors this Pine Script bot", "url": "https://www.mql5.com/en/job/249914/discussion?id=1316900", "priceUsd": 90, "deadlineDays": 5, "status": "offen", "category": "EA / Konvertierung" },
+    { "date": "2026-06-21", "time": "10:37", "platform": "MQL5", "jobId": "249904", "title": "Simple bot for opening range", "url": "https://www.mql5.com/en/job/249904/discussion?id=1316901", "priceUsd": 60, "deadlineDays": 4, "status": "offen", "category": "EA" },
+    { "date": "2026-06-21", "time": "10:37", "platform": "MQL5", "jobId": "249900", "title": "XAUUSD Expert Advisor (Liquidity Sweep Breakout Strategy)", "url": "https://www.mql5.com/en/job/249900/discussion?id=1316902", "priceUsd": 100, "deadlineDays": 5, "status": "offen", "category": "EA" },
+    { "date": "2026-06-21", "time": "10:37", "platform": "MQL5", "jobId": "249896", "title": "2STEP MA WITH SUPERTREND+ (Indikator)", "url": "https://www.mql5.com/en/job/249896/discussion?id=1316903", "priceUsd": 70, "deadlineDays": 3, "status": "offen", "category": "Indikator" },
+    { "date": "2026-06-21", "time": "10:37", "platform": "MQL5", "jobId": "249866", "title": "Port My MT5 Strategy to NinjaTrader 8 (NinjaScript)", "url": "https://www.mql5.com/en/job/249866/discussion?id=1316904", "priceUsd": 850, "deadlineDays": 14, "status": "offen", "category": "Konvertierung / NinjaScript" },
+    { "date": "2026-06-21", "time": "10:37", "platform": "MQL5", "jobId": "249858", "title": "Fix Risk Engine, Execution updates & Add Retest Logic", "url": "https://www.mql5.com/en/job/249858/discussion?id=1316905", "priceUsd": 120, "deadlineDays": 3, "status": "offen", "category": "EA / Modifikation" }
   ]
 }
