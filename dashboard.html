@@ -25,6 +25,12 @@
   .stat .label{font-size:13px;color:var(--muted);font-weight:500}
   .stat .value{font-size:32px;font-weight:700;letter-spacing:-.02em;margin-top:6px}
   .stat .value small{font-size:16px;font-weight:600;color:var(--muted)}
+  .tabs{display:flex;gap:8px;margin-bottom:18px}
+  .tab{font:inherit;font-weight:600;font-size:14px;padding:9px 18px;border:1px solid var(--line);border-radius:12px;
+    background:var(--card);color:var(--muted);cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+  .tab:hover{color:var(--ink)}
+  .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .tab .cnt{opacity:.75;font-weight:500;margin-left:5px}
   .toolbar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
   input[type=search],select{font:inherit;padding:10px 14px;border:1px solid var(--line);border-radius:12px;
     background:var(--card);color:var(--ink);outline:none;transition:border-color .15s}
@@ -42,6 +48,7 @@
   tr:hover td{background:#fafbff}
   tr.dead td{opacity:.55}
   tr.dead td.job a{text-decoration:line-through}
+  tr.fresh td{background:#fffdf5}
   td.job a{color:var(--ink);text-decoration:none;font-weight:500}
   td.job a:hover{color:var(--accent);text-decoration:underline}
   td.cat{color:var(--muted);font-size:12.5px}
@@ -53,6 +60,7 @@
   .b-abgelehnt{background:var(--red-bg);color:var(--red)}
   .b-vergeben{background:var(--grey-bg);color:var(--grey)}
   .b-geloescht{background:var(--red-bg);color:var(--red)}
+  .tag-neu{display:inline-block;margin-left:7px;padding:2px 7px;border-radius:7px;background:var(--orange-bg);color:var(--orange);font-size:10.5px;font-weight:700;vertical-align:middle}
   .pill{display:inline-block;padding:3px 9px;border-radius:8px;background:var(--accent-soft);color:var(--accent);font-size:12px;font-weight:600}
   .empty{padding:40px;text-align:center;color:var(--muted)}
   footer{margin-top:22px;color:var(--muted);font-size:12.5px;text-align:center}
@@ -70,6 +78,11 @@
 
   <section class="stats" id="stats"></section>
 
+  <div class="tabs">
+    <button class="tab active" data-tab="aktiv">Aktiv<span class="cnt" id="cntAktiv"></span></button>
+    <button class="tab" data-tab="archiv">Archiv<span class="cnt" id="cntArchiv"></span></button>
+  </div>
+
   <div class="toolbar">
     <input type="search" id="q" placeholder="Suche nach Job, Plattform, Kategorie …">
     <select id="fStatus">
@@ -78,6 +91,7 @@
       <option value="geantwortet">Kunde geantwortet</option>
       <option value="zuschlag">Zuschlag</option>
       <option value="vergeben">Vergeben</option>
+      <option value="abgelehnt">Abgelehnt</option>
       <option value="geloescht">Gelöscht</option>
     </select>
     <select id="fPlatform"><option value="">Alle Plattformen</option></select>
@@ -104,70 +118,61 @@
 </div>
 
 <script>
-// ====== DATEN (wird bei jedem täglichen Lauf neu eingesetzt) ======
+// ====== DATEN (Offline-Reserve; Live-Daten kommen aus bewerbungen.json) ======
 let DATA = {
-  "updated": "2026-06-19",
-  "statusChecked": "2026-06-19",
-  "applications": [
-    { "date":"2026-06-17","time":"10:49","platform":"MQL5","jobId":"249968","title":"Multi-Timeframe Dashboard EA with Built-in Indicator","url":"https://www.mql5.com/en/job/249968/discussion?id=1315343","priceUsd":150,"deadlineDays":5,"status":"geloescht","category":"EA + Indikator" },
-    { "date":"2026-06-17","time":"10:51","platform":"MQL5","jobId":"249967","title":"Sierra chart job","url":"https://www.mql5.com/en/job/249967/discussion?id=1315346","priceUsd":75,"deadlineDays":3,"status":"geantwortet","category":"Sierra Chart / C++" },
-    { "date":"2026-06-17","time":"10:52","platform":"MQL5","jobId":"249964","title":"Sweetposion hedge","url":"https://www.mql5.com/en/job/249964/discussion?id=1315348","priceUsd":50,"deadlineDays":2,"status":"offen","category":"EA" },
-    { "date":"2026-06-17","time":"10:54","platform":"MQL5","jobId":"249962","title":"Advanced Trend Momentum EA (AURAE)","url":"https://www.mql5.com/en/job/249962/discussion?id=1315350","priceUsd":100,"deadlineDays":4,"status":"vergeben","category":"EA" },
-    { "date":"2026-06-17","time":"10:55","platform":"MQL5","jobId":"249957","title":"AlphaGreen","url":"https://www.mql5.com/en/job/249957/discussion?id=1315351","priceUsd":175,"deadlineDays":5,"status":"offen","category":"EA + Indikator" },
-    { "date":"2026-06-17","time":"10:56","platform":"MQL5","jobId":"249953","title":"Robot trading","url":"https://www.mql5.com/en/job/249953/discussion?id=1315352","priceUsd":40,"deadlineDays":2,"status":"offen","category":"EA" },
-    { "date":"2026-06-17","time":"10:57","platform":"MQL5","jobId":"249952","title":"Prop Firm EA","url":"https://www.mql5.com/en/job/249952/discussion?id=1315353","priceUsd":40,"deadlineDays":5,"status":"offen","category":"EA" },
-    { "date":"2026-06-17","time":"10:58","platform":"MQL5","jobId":"249949","title":"Need add a custom indicator to my EA","url":"https://www.mql5.com/en/job/249949/discussion?id=1315354","priceUsd":40,"deadlineDays":3,"status":"offen","category":"Indikator" },
-    { "date":"2026-06-17","time":"10:59","platform":"MQL5","jobId":"249930","title":"Noganda EA","url":"https://www.mql5.com/en/job/249930/discussion?id=1315359","priceUsd":50,"deadlineDays":2,"status":"geloescht","category":"EA" },
-    { "date":"2026-06-17","time":"11:00","platform":"MQL5","jobId":"249929","title":"Looking for a simple Ichimoku based indicator","url":"https://www.mql5.com/en/job/249929/discussion?id=1315362","priceUsd":40,"deadlineDays":2,"status":"vergeben","category":"Indikator" },
-    { "date":"2026-06-18","time":"15:38","platform":"MQL5","jobId":"249994","title":"SIERRA CHART AUTOMATION","url":"https://www.mql5.com/en/job/249994/discussion?id=1315926","priceUsd":80,"deadlineDays":3,"status":"offen","category":"Sierra Chart / C++" },
-    { "date":"2026-06-18","time":"15:39","platform":"MQL5","jobId":"249991","title":"One click trading EA (MT4)","url":"https://www.mql5.com/en/job/249991/discussion?id=1315927","priceUsd":90,"deadlineDays":3,"status":"offen","category":"EA" },
-    { "date":"2026-06-18","time":"15:40","platform":"MQL5","jobId":"249987","title":"EliavTrade – Supply & Demand Prop Firm System","url":"https://www.mql5.com/en/job/249987/discussion?id=1315928","priceUsd":350,"deadlineDays":7,"status":"offen","category":"EA" },
-    { "date":"2026-06-18","time":"15:41","platform":"MQL5","jobId":"249986","title":"Chain Flow – Object-Driven Execution System","url":"https://www.mql5.com/en/job/249986/discussion?id=1315929","priceUsd":850,"deadlineDays":10,"status":"geantwortet","category":"EA" },
-    { "date":"2026-06-18","time":"15:42","platform":"MQL5","jobId":"249981","title":"Custom TradingView signal indicator","url":"https://www.mql5.com/en/job/249981/discussion?id=1315930","priceUsd":50,"deadlineDays":3,"status":"offen","category":"Indikator" },
-    { "date":"2026-06-18","time":"15:43","platform":"MQL5","jobId":"249976","title":"Full-Stack Forex Broker Comparison Platform","url":"https://www.mql5.com/en/job/249976/discussion?id=1315931","priceUsd":450,"deadlineDays":14,"status":"offen","category":"Web / Plattform" },
-    { "date":"2026-06-18","time":"15:44","platform":"MQL5","jobId":"249975","title":"MT4 volume indicator to Pine Script","url":"https://www.mql5.com/en/job/249975/discussion?id=1315932","priceUsd":50,"deadlineDays":2,"status":"vergeben","category":"Indikator / Konvertierung" },
-    { "date":"2026-06-18","time":"15:45","platform":"MQL5","jobId":"249974","title":"MT4 Dashboard Indicator (FX Agency 3)","url":"https://www.mql5.com/en/job/249974/discussion?id=1315933","priceUsd":180,"deadlineDays":4,"status":"vergeben","category":"Indikator" },
-    { "date":"2026-06-18","time":"15:46","platform":"MQL5","jobId":"249971","title":"Hedging EA (FP Markets)","url":"https://www.mql5.com/en/job/249971/discussion?id=1315934","priceUsd":80,"deadlineDays":4,"status":"vergeben","category":"EA" },
-    { "date":"2026-06-18","time":"15:47","platform":"MQL5","jobId":"249936","title":"Easy EA with Turkish support","url":"https://www.mql5.com/en/job/249936/discussion?id=1315935","priceUsd":70,"deadlineDays":3,"status":"offen","category":"EA / Consultation" },
-    { "date":"2026-06-19","time":"19:53","platform":"MQL5","jobId":"250015","title":"Modify EA – open multiple trades with pre-set TP levels","url":"https://www.mql5.com/en/job/250015/discussion?id=1316474","priceUsd":50,"deadlineDays":2,"status":"vergeben","category":"EA" },
-    { "date":"2026-06-19","time":"19:54","platform":"MQL5","jobId":"250013","title":"MT5 XAUUSD Order Block & Liquidity EA","url":"https://www.mql5.com/en/job/250013/discussion?id=1316475","priceUsd":180,"deadlineDays":5,"status":"offen","category":"EA" },
-    { "date":"2026-06-19","time":"19:55","platform":"MQL5","jobId":"250006","title":"Scalping/HFT EA (prop firm)","url":"https://www.mql5.com/en/job/250006/discussion?id=1316476","priceUsd":50,"deadlineDays":3,"status":"offen","category":"EA" },
-    { "date":"2026-06-19","time":"19:56","platform":"MQL5","jobId":"250005","title":"Sierra Chart – automate strategies","url":"https://www.mql5.com/en/job/250005/discussion?id=1316477","priceUsd":70,"deadlineDays":3,"status":"offen","category":"Sierra Chart / C++" },
-    { "date":"2026-06-19","time":"19:57","platform":"MQL5","jobId":"250004","title":"Professional XAUUSD Scalping EA TP1/TP2/TP3","url":"https://www.mql5.com/en/job/250004/discussion?id=1316478","priceUsd":100,"deadlineDays":4,"status":"vergeben","category":"EA" },
-    { "date":"2026-06-19","time":"19:58","platform":"MQL5","jobId":"250003","title":"MT5 Multi-TF RSI, H4 Support & Volume Alert Indicator","url":"https://www.mql5.com/en/job/250003/discussion?id=1316479","priceUsd":220,"deadlineDays":6,"status":"vergeben","category":"Indikator" },
-    { "date":"2026-06-19","time":"19:59","platform":"MQL5","jobId":"250000","title":"MC Trader's – engulfing/liquidity bot","url":"https://www.mql5.com/en/job/250000/discussion?id=1316480","priceUsd":50,"deadlineDays":3,"status":"vergeben","category":"EA / Python" },
-    { "date":"2026-06-19","time":"20:00","platform":"MQL5","jobId":"249996","title":"Telegram bot upgrade + options trading feature","url":"https://www.mql5.com/en/job/249996/discussion?id=1316481","priceUsd":120,"deadlineDays":5,"status":"offen","category":"Bot / Python" },
-    { "date":"2026-06-19","time":"20:01","platform":"MQL5","jobId":"249885","title":"Professional AI Automation Trading Bot Forex & Crypto","url":"https://www.mql5.com/en/job/249885/discussion?id=1316482","priceUsd":750,"deadlineDays":30,"status":"offen","category":"Python / AI" },
-    { "date":"2026-06-19","time":"20:02","platform":"MQL5","jobId":"249884","title":"MT5 Python Trading Bot – Smart Money Concepts","url":"https://www.mql5.com/en/job/249884/discussion?id=1316483","priceUsd":50,"deadlineDays":4,"status":"offen","category":"Python / EA" },
-    { "date":"2026-06-19","time":"20:17","platform":"MQL5","jobId":"249999","title":"Repair TradingView→Python→MT5 system (EXU) + proof report","url":"https://www.mql5.com/en/job/249999/discussion?id=1316485","priceUsd":150,"deadlineDays":7,"status":"offen","category":"Python / Backend" }
-  ]
+  "updated": "2026-06-22",
+  "statusChecked": "2026-06-22",
+  "applications": []
 };
 // =================================================================
 
 const STATUS_LABEL = {offen:"Offen", geantwortet:"Kunde geantwortet", zuschlag:"Zuschlag", vergeben:"Vergeben", geloescht:"Gelöscht", abgelehnt:"Abgelehnt"};
 const ACTIVE = ["offen","geantwortet","zuschlag"]; // zaehlt fuer aktiven Angebotswert
+const FINAL = ["vergeben","geloescht","abgelehnt"]; // tote Bewerbungen -> wandern ins Archiv
 // Status-Sortierung nach Nutzen (oben = wertvollster Lead), NICHT alphabetisch
 const STATUS_RANK = {zuschlag:0, geantwortet:1, offen:2, vergeben:3, abgelehnt:4, geloescht:5};
+const DAY_MS = 24*3600*1000;
 let apps = DATA.applications.slice();
 let sortKey = "date", sortDir = -1;
+let currentTab = "aktiv";
+
+// Eine Bewerbung gilt als ARCHIVIERT, wenn ihr Status final ist UND der Wechsel
+// in diesen Status mehr als 24h zurueckliegt (statusSince). Fehlt statusSince
+// (Altbestand), gilt sie sofort als archiviert.
+function isFinal(a){ return FINAL.includes(a.status); }
+function isArchived(a){
+  if(!isFinal(a)) return false;
+  if(!a.statusSince) return true;
+  const t = Date.parse(a.statusSince);
+  if(isNaN(t)) return true;
+  return (Date.now() - t) >= DAY_MS;
+}
+// frische Absage: final, aber noch < 24h -> bleibt im Aktiv-Tab, gelb markiert
+function isFresh(a){ return isFinal(a) && !isArchived(a); }
+function inTab(a){ return currentTab==="archiv" ? isArchived(a) : !isArchived(a); }
 
 function renderStats(){
   const total = apps.length;
   const offen = apps.filter(a=>a.status==="offen").length;
   const geantw = apps.filter(a=>a.status==="geantwortet").length;
-  const tot = apps.filter(a=>a.status==="geloescht"||a.status==="vergeben").length;
+  const archiv = apps.filter(a=>isArchived(a)).length;
   const wert = apps.filter(a=>ACTIVE.includes(a.status)).reduce((s,a)=>s+(+a.priceUsd||0),0);
   const cards = [
     {label:"Bewerbungen gesamt", value:total},
     {label:"Offen / wartet", value:offen},
     {label:"Kunde geantwortet", value:geantw},
-    {label:"Gelöscht / vergeben", value:tot},
+    {label:"Im Archiv", value:archiv},
     {label:"Aktiver Angebotswert", value:wert+' <small>USD</small>'}
   ];
   document.getElementById("stats").innerHTML = cards.map(c=>
     '<div class="stat"><div class="label">'+c.label+'</div><div class="value">'+c.value+'</div></div>').join("");
   document.getElementById("sub").textContent =
     "Letzter Lauf: "+DATA.updated+" · "+total+" Einträge · Status zuletzt geprüft: "+(DATA.statusChecked||"—");
+  // Tab-Zaehler
+  const ak = apps.filter(a=>!isArchived(a)).length;
+  const ar = apps.filter(a=>isArchived(a)).length;
+  document.getElementById("cntAktiv").textContent = " ("+ak+")";
+  document.getElementById("cntArchiv").textContent = " ("+ar+")";
 }
 
 function platforms(){ return [...new Set(apps.map(a=>a.platform))].sort(); }
@@ -178,7 +183,7 @@ function applyFilters(){
   const pf = document.getElementById("fPlatform").value;
   let list = apps.filter(a=>{
     const hay = (a.title+" "+a.platform+" "+(a.category||"")).toLowerCase();
-    return (!q || hay.includes(q)) && (!st || a.status===st) && (!pf || a.platform===pf);
+    return inTab(a) && (!q || hay.includes(q)) && (!st || a.status===st) && (!pf || a.platform===pf);
   });
   list.sort((a,b)=>{
     let x=a[sortKey], y=b[sortKey];
@@ -195,14 +200,16 @@ function renderRows(list){
   const tb = document.getElementById("rows");
   document.getElementById("empty").style.display = list.length?"none":"block";
   tb.innerHTML = list.map(a=>{
-    const dead = (a.status==="geloescht"||a.status==="vergeben");
-    return '<tr class="'+(dead?"dead":"")+'">'+
+    const dead = isFinal(a);
+    const fresh = isFresh(a);
+    const neu = fresh ? '<span class="tag-neu">NEU</span>' : '';
+    return '<tr class="'+(dead?"dead ":"")+(fresh?"fresh":"")+'">'+
       '<td>'+a.date+'<br><span class="cat">'+(a.time||"")+'</span></td>'+
       '<td><span class="pill">'+a.platform+'</span></td>'+
       '<td class="job"><a href="'+a.url+'" target="_blank" rel="noopener">'+a.title+'</a><br><span class="cat">'+(a.category||"")+'</span></td>'+
       '<td class="price">'+a.priceUsd+' $</td>'+
       '<td>'+a.deadlineDays+' Tage</td>'+
-      '<td><span class="badge b-'+a.status+'">'+(STATUS_LABEL[a.status]||a.status)+'</span></td>'+
+      '<td><span class="badge b-'+a.status+'">'+(STATUS_LABEL[a.status]||a.status)+'</span>'+neu+'</td>'+
     '</tr>';
   }).join("");
 }
@@ -222,12 +229,17 @@ function init(){
   document.getElementById("q").addEventListener("input", applyFilters);
   document.getElementById("fStatus").addEventListener("change", applyFilters);
   document.getElementById("fPlatform").addEventListener("change", applyFilters);
+  document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",function(){
+    currentTab = t.dataset.tab;
+    document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active", x===t));
+    applyFilters();
+  }));
   document.querySelectorAll("th[data-k]").forEach(th=>th.addEventListener("click",function(){
     const k=th.dataset.k; if(sortKey===k) sortDir*=-1; else {sortKey=k; sortDir=1;}
     applyFilters();
   }));
   document.getElementById("foot").textContent =
-    "Live aus bewerbungen.json · aktualisiert sich automatisch alle 2 Min · Bewerbungen täglich, Status mehrfach pro Tag geprüft";
+    "Live aus bewerbungen.json · aktualisiert sich automatisch alle 2 Min · Absagen wandern 24h nach Erkennung automatisch ins Archiv";
   applyFilters();
 }
 
