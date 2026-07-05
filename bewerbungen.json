@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-30",
-  "statusChecked": "2026-06-30",
+  "updated": "2026-07-05",
+  "statusChecked": "2026-07-05",
   "applications": [
     { "date": "2026-06-17", "time": "10:49", "platform": "MQL5", "jobId": "249968", "title": "Multi-Timeframe Dashboard EA with Built-in Indicator", "url": "https://www.mql5.com/en/job/249968/discussion?id=1315343", "priceUsd": 150, "deadlineDays": 5, "status": "geloescht", "category": "EA + Indikator" },
     { "date": "2026-06-17", "time": "10:51", "platform": "MQL5", "jobId": "249967", "title": "Sierra chart job", "url": "https://www.mql5.com/en/job/249967/discussion?id=1315346", "priceUsd": 72, "deadlineDays": 3, "status": "zuschlag", "category": "Sierra Chart / C++" },
@@ -93,6 +93,11 @@
     { "date": "2026-06-28", "time": "21:01", "platform": "MQL5", "jobId": "250146", "title": "Bot for 1min strategy (no AI bot makers)", "url": "https://www.mql5.com/en/job/250146/discussion?id=1320210", "priceUsd": 70, "deadlineDays": 4, "status": "vergeben", "statusSince": "2026-06-30T11:13:00+02:00", "category": "EA" },
     { "date": "2026-06-28", "time": "21:01", "platform": "MQL5", "jobId": "250141", "title": "MT4 EA XAUUSD SMC/ICT (BOS/CHoCH, OB/FVG)", "url": "https://www.mql5.com/en/job/250141/discussion?id=1320211", "priceUsd": 50, "deadlineDays": 4, "status": "offen", "category": "EA" },
     { "date": "2026-06-28", "time": "21:01", "platform": "MQL5", "jobId": "250138", "title": "XAUUSD SMC EA (D1/H4 200EMA, Multi-TF confirm)", "url": "https://www.mql5.com/en/job/250138/discussion?id=1320212", "priceUsd": 120, "deadlineDays": 7, "status": "offen", "category": "EA" },
-    { "date": "2026-06-28", "time": "21:01", "platform": "MQL5", "jobId": "250130", "title": "Eagoldcent (Grid Martingale MT4&5 Cent Account)", "url": "https://www.mql5.com/en/job/250130/discussion?id=1320213", "priceUsd": 120, "deadlineDays": 5, "status": "offen", "category": "EA" }
+    { "date": "2026-06-28", "time": "21:01", "platform": "MQL5", "jobId": "250130", "title": "Eagoldcent (Grid Martingale MT4&5 Cent Account)", "url": "https://www.mql5.com/en/job/250130/discussion?id=1320213", "priceUsd": 120, "deadlineDays": 5, "status": "offen", "category": "EA" },
+    { "date": "2026-07-05", "time": "13:41", "platform": "MQL5", "jobId": "250343", "title": "Offline MT5 Multi-TF Dashboard Backtester (EX4-Frage)", "url": "https://www.mql5.com/en/job/250343/discussion?id=1322661", "priceUsd": 300, "deadlineDays": 10, "status": "offen", "category": "Backtester / Tooling" },
+    { "date": "2026-07-05", "time": "13:41", "platform": "MQL5", "jobId": "250322", "title": "MQL5 EA – EMA-Based Trading Strategy", "url": "https://www.mql5.com/en/job/250322/discussion?id=1322662", "priceUsd": 120, "deadlineDays": 10, "status": "offen", "category": "EA" },
+    { "date": "2026-07-05", "time": "13:41", "platform": "MQL5", "jobId": "250331", "title": "Indicator CRT Arrows (Multi-TF)", "url": "https://www.mql5.com/en/job/250331/discussion?id=1322663", "priceUsd": 40, "deadlineDays": 7, "status": "offen", "category": "Indikator" },
+    { "date": "2026-07-05", "time": "13:41", "platform": "MQL5", "jobId": "250325", "title": "Multi-Timeframe Candlestick Pattern Scanner Indicator", "url": "https://www.mql5.com/en/job/250325/discussion?id=1322664", "priceUsd": 30, "deadlineDays": 7, "status": "offen", "category": "Indikator" },
+    { "date": "2026-07-05", "time": "13:41", "platform": "MQL5", "jobId": "250330", "title": "Improve Existing MQL5 Expert Advisor", "url": "https://www.mql5.com/en/job/250330/discussion?id=1322665", "priceUsd": 30, "deadlineDays": 7, "status": "offen", "category": "EA / Modifikation" }
   ]
 }
