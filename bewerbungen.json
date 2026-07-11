@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-11",
-  "statusChecked": "2026-07-11 (laufende Jobs + 10 neue Bewerbungen)",
+  "statusChecked": "2026-07-11 (alle offenen live verifiziert: 404-Check + getComments)",
   "applications": [
     {
       "date": "2026-06-17",
@@ -41,7 +41,7 @@
       "deadlineDays": 2,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-17",
@@ -67,7 +67,7 @@
       "deadlineDays": 5,
       "status": "offen",
       "category": "EA + Indikator",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-17",
@@ -80,7 +80,7 @@
       "deadlineDays": 2,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-17",
@@ -172,7 +172,7 @@
       "deadlineDays": 7,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-18",
@@ -212,7 +212,7 @@
       "deadlineDays": 14,
       "status": "offen",
       "category": "Web / Plattform",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-18",
@@ -292,7 +292,7 @@
       "deadlineDays": 5,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-19",
@@ -384,7 +384,7 @@
       "deadlineDays": 30,
       "status": "offen",
       "category": "Python / AI",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-19",
@@ -397,7 +397,7 @@
       "deadlineDays": 4,
       "status": "offen",
       "category": "Python / EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-19",
@@ -410,7 +410,7 @@
       "deadlineDays": 7,
       "status": "offen",
       "category": "Python / Backend",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-21",
@@ -463,7 +463,7 @@
       "deadlineDays": 10,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-21",
@@ -502,7 +502,7 @@
       "deadlineDays": 5,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-21",
@@ -528,7 +528,7 @@
       "deadlineDays": 14,
       "status": "offen",
       "category": "Konvertierung / NinjaScript",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-21",
@@ -703,7 +703,7 @@
       "deadlineDays": 3,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-24",
@@ -730,7 +730,7 @@
       "deadlineDays": 7,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-24",
@@ -757,7 +757,7 @@
       "deadlineDays": 3,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-24",
@@ -811,7 +811,7 @@
       "deadlineDays": 21,
       "status": "offen",
       "category": "Signal / Logic",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-24",
@@ -824,7 +824,7 @@
       "deadlineDays": 5,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-25",
@@ -851,7 +851,7 @@
       "deadlineDays": 5,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-25",
@@ -864,7 +864,7 @@
       "deadlineDays": 6,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-25",
@@ -877,7 +877,7 @@
       "deadlineDays": 4,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-25",
@@ -890,7 +890,7 @@
       "deadlineDays": 6,
       "status": "offen",
       "category": "EA / Copy Trading",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-25",
@@ -903,7 +903,7 @@
       "deadlineDays": 6,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-25",
@@ -971,7 +971,7 @@
       "deadlineDays": 4,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-27",
@@ -998,7 +998,7 @@
       "deadlineDays": 4,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-27",
@@ -1011,7 +1011,7 @@
       "deadlineDays": 3,
       "status": "offen",
       "category": "Indikator / Filter",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-27",
@@ -1024,7 +1024,7 @@
       "deadlineDays": 4,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-27",
@@ -1064,7 +1064,7 @@
       "deadlineDays": 4,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-27",
@@ -1176,7 +1176,7 @@
       "deadlineDays": 5,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-28",
@@ -1203,7 +1203,7 @@
       "deadlineDays": 4,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-28",
@@ -1216,7 +1216,7 @@
       "deadlineDays": 7,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-06-28",
@@ -1229,7 +1229,7 @@
       "deadlineDays": 5,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-07-05",
@@ -1242,7 +1242,7 @@
       "deadlineDays": 10,
       "status": "offen",
       "category": "Backtester / Tooling",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-07-05",
@@ -1253,9 +1253,10 @@
       "url": "https://www.mql5.com/en/job/250322/discussion?id=1322662",
       "priceUsd": 120,
       "deadlineDays": 10,
-      "status": "offen",
+      "status": "geloescht",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11",
+      "statusSince": "2026-07-11T11:38:00+02:00"
     },
     {
       "date": "2026-07-05",
@@ -1307,7 +1308,7 @@
       "deadlineDays": 5,
       "status": "offen",
       "category": "NinjaTrader / C#",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-07-06",
@@ -1347,7 +1348,7 @@
       "deadlineDays": 4,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-07-06",
@@ -1375,7 +1376,7 @@
       "deadlineDays": 3,
       "status": "offen",
       "category": "Indikator / MQL4",
-      "statusVerified": "2026-07-06"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-07-08",
@@ -1401,7 +1402,7 @@
       "deadlineDays": 5,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-08"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-07-08",
@@ -1414,7 +1415,7 @@
       "deadlineDays": 5,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-08"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-07-08",
@@ -1440,7 +1441,7 @@
       "deadlineDays": 4,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-08"
+      "statusVerified": "2026-07-11"
     },
     {
       "date": "2026-07-08",
