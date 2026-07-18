@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-11",
-  "statusChecked": "2026-07-11 (alle offenen live verifiziert: 404-Check + getComments)",
+  "updated": "2026-07-18",
+  "statusChecked": "2026-07-18 (alle 50 offenen live per getComments verifiziert)",
   "applications": [
     {
       "date": "2026-06-17",
@@ -24,9 +24,9 @@
       "url": "https://www.mql5.com/en/job/249967/discussion?id=1315346",
       "priceUsd": 72,
       "deadlineDays": 3,
-      "status": "zuschlag",
+      "status": "verloren",
       "category": "Sierra Chart / C++",
-      "statusVerified": "2026-07-11",
+      "statusVerified": "2026-07-18",
       "customerReplied": true,
       "note": "V2.5 geliefert, \"Last one\" gesagt, Kunde testet finale Version"
     },
@@ -875,9 +875,9 @@
       "url": "https://www.mql5.com/en/job/250119/discussion?id=1318841",
       "priceUsd": 70,
       "deadlineDays": 4,
-      "status": "offen",
+      "status": "geantwortet",
       "category": "EA",
-      "statusVerified": "2026-07-11"
+      "statusVerified": "2026-07-18"
     },
     {
       "date": "2026-06-25",
@@ -1346,9 +1346,9 @@
       "url": "https://www.mql5.com/en/job/250388/discussion?id=1323396",
       "priceUsd": 30,
       "deadlineDays": 4,
-      "status": "offen",
+      "status": "abgelehnt",
       "category": "EA",
-      "statusVerified": "2026-07-11"
+      "statusVerified": "2026-07-18"
     },
     {
       "date": "2026-07-06",
@@ -1478,9 +1478,9 @@
       "url": "https://www.mql5.com/en/job/250495/discussion?id=1325472",
       "priceUsd": 45,
       "deadlineDays": 5,
-      "status": "offen",
+      "status": "vergeben",
       "category": "EA / Anpassung",
-      "statusVerified": "2026-07-11"
+      "statusVerified": "2026-07-18"
     },
     {
       "date": "2026-07-11",
@@ -1504,9 +1504,9 @@
       "url": "https://www.mql5.com/en/job/250493/discussion?id=1325474",
       "priceUsd": 200,
       "deadlineDays": 12,
-      "status": "offen",
+      "status": "abgelehnt",
       "category": "EA",
-      "statusVerified": "2026-07-11"
+      "statusVerified": "2026-07-18"
     },
     {
       "date": "2026-07-11",
@@ -1556,9 +1556,9 @@
       "url": "https://www.mql5.com/en/job/250482/discussion?id=1325481",
       "priceUsd": 90,
       "deadlineDays": 6,
-      "status": "offen",
+      "status": "vergeben",
       "category": "EA",
-      "statusVerified": "2026-07-11"
+      "statusVerified": "2026-07-18"
     },
     {
       "date": "2026-07-11",
@@ -1582,9 +1582,9 @@
       "url": "https://www.mql5.com/en/job/250466/discussion?id=1325483",
       "priceUsd": 70,
       "deadlineDays": 5,
-      "status": "offen",
+      "status": "vergeben",
       "category": "EA",
-      "statusVerified": "2026-07-11"
+      "statusVerified": "2026-07-18"
     },
     {
       "date": "2026-07-11",
@@ -1595,9 +1595,139 @@
       "url": "https://www.mql5.com/en/job/250469/discussion?id=1325484",
       "priceUsd": 150,
       "deadlineDays": 9,
+      "status": "geantwortet",
+      "category": "EA",
+      "statusVerified": "2026-07-18"
+    },
+    {
+      "date": "2026-07-18",
+      "time": "17:05",
+      "platform": "MQL5",
+      "jobId": "250598",
+      "title": "SIERRA CHART INDICATOR (TPO/Single Prints/Footprint)",
+      "url": "https://www.mql5.com/en/job/250598/discussion?id=1328404",
+      "priceUsd": 85,
+      "deadlineDays": 5,
+      "status": "offen",
+      "category": "Sierra ACSIL",
+      "statusVerified": "2026-07-18"
+    },
+    {
+      "date": "2026-07-18",
+      "time": "17:05",
+      "platform": "MQL5",
+      "jobId": "250599",
+      "title": "NT8 Layout nach Sierra Chart portieren",
+      "url": "https://www.mql5.com/en/job/250599/discussion?id=1328405",
+      "priceUsd": 95,
+      "deadlineDays": 3,
+      "status": "offen",
+      "category": "Sierra/NT8",
+      "statusVerified": "2026-07-18"
+    },
+    {
+      "date": "2026-07-18",
+      "time": "17:05",
+      "platform": "MQL5",
+      "jobId": "250624",
+      "title": "ONYX SR V2 Pine Script v6 Scalping-Indikator",
+      "url": "https://www.mql5.com/en/job/250624/discussion?id=1328406",
+      "priceUsd": 150,
+      "deadlineDays": 8,
+      "status": "offen",
+      "category": "Pine Script",
+      "statusVerified": "2026-07-18"
+    },
+    {
+      "date": "2026-07-18",
+      "time": "17:05",
+      "platform": "MQL5",
+      "jobId": "250606",
+      "title": "MT4 HFT/Low-Latency EA mit LMAX-Feed",
+      "url": "https://www.mql5.com/en/job/250606/discussion?id=1328407",
+      "priceUsd": 90,
+      "deadlineDays": 10,
+      "status": "offen",
+      "category": "EA MQL4",
+      "statusVerified": "2026-07-18"
+    },
+    {
+      "date": "2026-07-18",
+      "time": "17:05",
+      "platform": "MQL5",
+      "jobId": "250605",
+      "title": "MT4 HFT EA IC Markets (US30/XAUUSD)",
+      "url": "https://www.mql5.com/en/job/250605/discussion?id=1328408",
+      "priceUsd": 85,
+      "deadlineDays": 10,
+      "status": "offen",
+      "category": "EA MQL4",
+      "statusVerified": "2026-07-18"
+    },
+    {
+      "date": "2026-07-18",
+      "time": "17:05",
+      "platform": "MQL5",
+      "jobId": "250636",
+      "title": "Multi-Pair Trade Manager EA (1-3 TPs, BE)",
+      "url": "https://www.mql5.com/en/job/250636/discussion?id=1328409",
+      "priceUsd": 55,
+      "deadlineDays": 5,
       "status": "offen",
       "category": "EA",
-      "statusVerified": "2026-07-11"
+      "statusVerified": "2026-07-18"
+    },
+    {
+      "date": "2026-07-18",
+      "time": "17:05",
+      "platform": "MQL5",
+      "jobId": "250611",
+      "title": "TradingView-MT5 Bridge (5 TPs, Master SL)",
+      "url": "https://www.mql5.com/en/job/250611/discussion?id=1328410",
+      "priceUsd": 50,
+      "deadlineDays": 25,
+      "status": "offen",
+      "category": "Bridge",
+      "statusVerified": "2026-07-18"
+    },
+    {
+      "date": "2026-07-18",
+      "time": "17:05",
+      "platform": "MQL5",
+      "jobId": "250617",
+      "title": "Mean-Reversion Grid EA XAUUSD M5",
+      "url": "https://www.mql5.com/en/job/250617/discussion?id=1328411",
+      "priceUsd": 70,
+      "deadlineDays": 10,
+      "status": "offen",
+      "category": "EA MQL5",
+      "statusVerified": "2026-07-18"
+    },
+    {
+      "date": "2026-07-18",
+      "time": "17:05",
+      "platform": "MQL5",
+      "jobId": "250601",
+      "title": "QUIK Lua Multi-Instrument Robot (FORTS)",
+      "url": "https://www.mql5.com/en/job/250601/discussion?id=1328412",
+      "priceUsd": 260,
+      "deadlineDays": 18,
+      "status": "offen",
+      "category": "Lua/QUIK",
+      "statusVerified": "2026-07-18"
+    },
+    {
+      "date": "2026-07-18",
+      "time": "17:05",
+      "platform": "MQL5",
+      "jobId": "250530",
+      "title": "ET BANDS Indikator nachbauen",
+      "url": "https://www.mql5.com/en/job/250530/discussion?id=1328413",
+      "priceUsd": 45,
+      "deadlineDays": 15,
+      "status": "offen",
+      "category": "Indikator",
+      "statusVerified": "2026-07-18"
     }
   ]
 }
