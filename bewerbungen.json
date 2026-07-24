@@ -1,6 +1,6 @@
 ﻿{
-    "updated":  "2026-07-23",
-    "statusChecked":  "2026-07-23 (62 Threads geprueft; 250622 Kunde geantwortet; 250670/250657/250655 vergeben; 10 neue Bewerbungen)",
+    "updated":  "2026-07-24",
+    "statusChecked":  "2026-07-24 (69 Threads geprueft; 250622 beantwortet - QuickShare-Link abgelaufen, Neu-Senden + 4 Technikfragen; 250722/250703 vergeben)",
     "applications":  [
                          {
                              "date":  "2026-06-17",
@@ -1793,7 +1793,9 @@
                              "deadlineDays":  8,
                              "status":  "geantwortet",
                              "category":  "Indicators/Experts",
-                             "statusVerified":  "2026-07-23"
+                             "statusVerified":  "2026-07-24",
+                             "customerReplied":  true,
+                             "note":  "Kunde hat uns auf CANDIDATES gesetzt (22.07.) + Spec per QuickShare geschickt - Link abgelaufen. 24.07. geantwortet: bitte Datei direkt im Thread anhaengen + 4 Fragen (MT4?, ML-Framework/ONNX vs Python-Bridge, kompiliert AI-Code?, live oder Backtest). Kunde: 14 Auftraege, 0 Arbitrage."
                          },
                          {
                              "date":  "2026-07-20",
@@ -1917,8 +1919,9 @@
                              "url":  "https://www.mql5.com/en/job/250722/discussion?id=1330318",
                              "priceUsd":  120,
                              "deadlineDays":  6,
-                             "status":  "offen",
-                             "category":  "Python/Automation"
+                             "status":  "vergeben",
+                             "category":  "Python/Automation",
+                             "statusVerified":  "2026-07-24"
                          },
                          {
                              "date":  "2026-07-23",
@@ -1977,8 +1980,9 @@
                              "url":  "https://www.mql5.com/en/job/250703/discussion?id=1330323",
                              "priceUsd":  95,
                              "deadlineDays":  7,
-                             "status":  "offen",
-                             "category":  "EA"
+                             "status":  "vergeben",
+                             "category":  "EA",
+                             "statusVerified":  "2026-07-24"
                          }
                      ]
 }
